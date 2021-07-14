@@ -42,7 +42,7 @@ export default function Header({ handleMySkyLogout }) {
               Profile
             </Menu.Button>
 
-            <Menu.Items className="p-4 shadow rounded flex flex-col absolute z-10 bg-white top-16 right-16">
+            <Menu.Items className="p-4 shadow rounded flex flex-col absolute z-10 bg-white top-14 right-16">
               <Menu.Item>
                 {({ active }) => (
                   <a

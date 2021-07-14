@@ -1,6 +1,14 @@
-export default function LandingPage({ loggedIn, handleMySkyLogin }) {
+import Header from "./Header.js";
+
+export default function LandingPage({
+  loggedIn,
+  handleMySkyLogin,
+  handleMySkyLogout,
+}) {
   return (
     <div>
+      {/* <Header handleMySkyLogout={() => handleMySkyLogout(mySky, dispatch)} /> */}
+      <Header handleMySkyLogout={handleMySkyLogout} />
       {loggedIn ? (
         <div>
           <h1 className="text-xl bg-red-300">hello user</h1>
@@ -16,6 +24,7 @@ export default function LandingPage({ loggedIn, handleMySkyLogin }) {
           </button>
         </div>
       )}
+      {/* placeholder start */}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
         distinctio ea quaerat nesciunt vitae quos aliquam tenetur ut beatae,
@@ -143,6 +152,7 @@ export default function LandingPage({ loggedIn, handleMySkyLogin }) {
         natus exercitationem, cum debitis. Ullam voluptatum perferendis quam.
         Ex, pariatur error.
       </p>
+      {/* placeholder end */}
     </div>
   );
 }

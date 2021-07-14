@@ -4,7 +4,6 @@ import React, { useState, useEffect, useReducer } from "react";
 import { CLIENT, CONTENT_RECORD, DATA_DOMAIN } from "./utils/skynet-ev.js";
 import { handleMySkyLogin, handleMySkyLogout } from "./utils/skynet-utils.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./component/Header.js";
 import LandingPage from "./component/LandingPage.js";
 import Dashboard from "./dashboard/Dashboard.js";
 
@@ -79,12 +78,12 @@ export default function App() {
   return (
     <div>
       <Router>
-        <Header handleMySkyLogout={() => handleMySkyLogout(mySky, dispatch)} />
         <Switch>
           <Route path="/" exact>
             <LandingPage
               loggedIn={state.loggedIn}
               handleMySkyLogin={() => handleMySkyLogin(mySky, dispatch)}
+              handleMySkyLogout={() => handleMySkyLogout(mySky, dispatch)}
             />
           </Route>
           <Route path="/dashboard" component={Dashboard} />
