@@ -2,6 +2,8 @@
 // import { Disclosure, Menu, Transition } from "@headlessui/react";
 // import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import DashboardNavBar from "./DashboardNavBar.js";
+import Document from "../document/Document.js";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -23,6 +25,9 @@ export default function Dashboard() {
             </Route>
             <Route path={`${path}/team`}>
               <h1>tesan</h1>
+            </Route>
+            <Route path={`${path}/documents`}>
+              <Document />
             </Route>
             <Route path={`${path}/:id`}>
               <header className="bg-white shadow">

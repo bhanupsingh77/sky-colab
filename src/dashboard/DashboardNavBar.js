@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 
-const navigation = ["Dashboard", "Team", "Projects"];
+const navigation = ["Dashboard", "documents", "Projects"];
 const profile = ["Your Profile", "Settings", "Sign out"];
 
 function DashboardNavBar({ url }) {
@@ -15,7 +15,7 @@ function DashboardNavBar({ url }) {
             <div className="">
               {/* Mobile menu button */}
               <div
-                className={`pt-1 flex justify-center md:hidden ${
+                className={`md:hidden z-10 flex justify-center  ${
                   open ? "relative top-0 right-0 w-44 bg-gray-800" : null
                 }`}
               >
@@ -55,7 +55,7 @@ function DashboardNavBar({ url }) {
               </div>
 
               {/* Mobile menu  */}
-              <Disclosure.Panel className="md:hidden relative top-0 right-0 w-44 h-screen flex flex-col bg-gray-800">
+              <Disclosure.Panel className="md:hidden z-10 relative -top-px right-0 w-44 h-screen flex flex-col bg-gray-800">
                 {navigation.map((item, itemIdx) =>
                   itemIdx === 0 ? (
                     <Fragment key={item}>
@@ -63,7 +63,7 @@ function DashboardNavBar({ url }) {
                       <Link
                         key={item}
                         to={`${url}`}
-                        className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className=" text-white px-3 py-2 rounded-md text-sm font-medium"
                       >
                         {item}
                       </Link>
