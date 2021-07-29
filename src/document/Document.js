@@ -103,7 +103,7 @@ function Document() {
       value={value}
       onChange={(value) => {
         setValue(value);
-
+        console.log("document", value);
         // Save the value to Local Storage.
         const content = JSON.stringify(value);
         localStorage.setItem("content", content);

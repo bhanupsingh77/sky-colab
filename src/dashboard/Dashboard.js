@@ -3,6 +3,7 @@
 // import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import DashboardNavBar from "./DashboardNavBar.js";
 import Document from "../document/Document.js";
+import GunColab from "../component/GunColab.js";
 
 import {
   BrowserRouter as Router,
@@ -23,8 +24,8 @@ export default function Dashboard() {
             <Route exact path={path}>
               <h3>Please select a topic.</h3>
             </Route>
-            <Route path={`${path}/team`}>
-              <h1>tesan</h1>
+            <Route path={`${path}/projects`}>
+              <GunColab />
             </Route>
             <Route path={`${path}/documents`}>
               <Document />
